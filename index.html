@@ -1,36 +1,164 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Personal Website</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 80px auto;
-      padding: 20px;
-      line-height: 1.7;
-    }
-    h1 { color: #17365D; }
-    a { color: #0066cc; }
-  </style>
+  <title>Qinghan Jia</title>
+  <meta name="description" content="Qinghan Jia — robot learning for contact-rich manipulation, AI for CAD and robot co-design.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <h1>Your Name</h1>
-  <p>Researcher | Robotics | Artificial Intelligence</p>
+  <nav class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#">Qinghan Jia</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+      </div>
+    </div>
+  </nav>
 
-  <h2>About Me</h2>
-  <p>Welcome to my personal website.</p>
+  <main class="wrap">
+    <!-- Profile -->
+    <section id="about" class="profile">
+      <div class="photo">
+        <img src="assets/img/profile.jpg" alt="Qinghan Jia">
+      </div>
+      <div class="bio">
+        <h1>Qinghan Jia</h1>
+        <p class="role">M.S. Student · Southeast University</p>
+        <p>
+          I am an M.S. student in Systems Science at
+          <a href="https://www.seu.edu.cn/">Southeast University</a>, where I also received my
+          B.S. in Mathematics and Applied Mathematics. I am currently a research intern at
+          Midea AI Research Institute.
+        </p>
+        <p>
+          I work on robot learning for contact-rich manipulation, hands-on from hardware and
+          data collection to model training and real-robot deployment. I am also interested in
+          AI for CAD and hardware–policy co-design, where task data shapes both a robot's body
+          and its behavior.
+        </p>
+        <div class="links">
+          <a href="mailto:jiaqinghan13@gmail.com">Email</a>
+          <a href="assets/Qinghan_Jia_CV.pdf">CV</a>
+          <a href="https://github.com/QinghanJia">GitHub</a>
+        </div>
+      </div>
+    </section>
 
-  <h2>Research</h2>
-  <p>My research focuses on robotics and AI.</p>
+    <!-- Research interests -->
+    <section>
+      <h2>Research Interests</h2>
+      <ul class="tags">
+        <li>Robot Learning</li>
+        <li>Contact-Rich Manipulation</li>
+        <li>Tactile &amp; Force Sensing</li>
+        <li>World Models</li>
+        <li>Learning from Demonstration</li>
+        <li>AI for CAD</li>
+        <li>Co-Design</li>
+      </ul>
+    </section>
 
-  <h2>Publications</h2>
-  <p>Coming soon.</p>
+    <!-- Publications -->
+    <section id="publications">
+      <h2>Publications</h2>
 
-  <h2>Contact</h2>
-  <a href="https://github.com/">GitHub</a>
+      <article class="pub">
+        <a class="thumb" href="https://contactwam.github.io">
+          <video src="assets/media/contactwam.mp4" poster="assets/media/contactwam.jpg"
+                 autoplay muted loop playsinline aria-label="ContactWAM policy screwing in a light bulb"></video>
+        </a>
+        <div class="pub-body">
+          <h3>ContactWAM: From Handheld Force–Tactile Demonstrations to Contact-Predictive World Action Model</h3>
+          <p class="authors"><b>Qinghan Jia</b>, et al.</p>
+          <p class="venue">Under review at <i>ICRA 2027</i></p>
+          <p class="pub-links">
+            <a href="https://contactwam.github.io">Project Page</a>
+          </p>
+          <p class="tldr">
+            A world action model whose contact expert predicts future touch and wrench together
+            with video and actions. It reaches 77.5% mean success on four real-robot contact-rich
+            tasks, compared with 43.8% for π<sub>0.5</sub> and 45.0% for vision-only FastWAM.
+          </p>
+        </div>
+      </article>
+
+      <article class="pub">
+        <a class="thumb" href="https://demo2arm.github.io">
+          <video src="assets/media/demo2arm.mp4" poster="assets/media/demo2arm.jpg"
+                 autoplay muted loop playsinline aria-label="Rendered task-specific robot arm designed by Demo2Arm"></video>
+        </a>
+        <div class="pub-body">
+          <h3>Demo2Arm: From Human Demonstrations to Task-Specific Robotic Arms via Differentiable Co-Design</h3>
+          <p class="authors"><b>Qinghan Jia</b>, et al.</p>
+          <p class="venue">Under review at <i>ICRA 2027</i></p>
+          <p class="pub-links">
+            <a href="https://demo2arm.github.io">Project Page</a>
+          </p>
+          <p class="tldr">
+            A differentiable co-design framework that turns demonstrated trajectories and
+            six-axis wrenches into task-specific arm designs, cutting link deflection by 17.2%
+            and peak torque utilization by 16.2%.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul class="timeline">
+        <li>
+          <time>2026</time>
+          <div>
+            <h3>Midea AI Research Institute</h3>
+            <p>Research Intern</p>
+            <p>ContactWAM; a UMI data-to-deployment pipeline for a household bimanual VLA.</p>
+          </div>
+        </li>
+        <li>
+          <time>Summer 2025</time>
+          <div>
+            <h3>Shanghai Jiao Tong University</h3>
+            <p>Research Intern, Prof. Cewu Lu's Lab</p>
+            <p>Demo2Arm.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
+      <ul class="timeline">
+        <li>
+          <time>2024 – Present</time>
+          <div>
+            <h3>Southeast University</h3>
+            <p>M.S. in Systems Science</p>
+          </div>
+        </li>
+        <li>
+          <time>2020 – 2024</time>
+          <div>
+            <h3>Southeast University</h3>
+            <p>B.S. in Mathematics and Applied Mathematics</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <div class="footer">© 2026 Qinghan Jia · Last updated Oct 2026</div>
+  </footer>
+
+  <script src="assets/js/background.js"></script>
 </body>
 </html>
